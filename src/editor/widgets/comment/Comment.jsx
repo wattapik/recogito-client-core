@@ -44,7 +44,7 @@ const Comment = props => {
   
   return props.readOnly ? (
     <div className="r6o-widget comment">
-      <div className="r6o-readonly-comment">{props.body.value}</div>
+      <div dangerouslySetInnerHTML={{ __html: props.body.value }} className="r6o-readonly-comment"></div>
       { creatorInfo }
     </div>
   ) : (
